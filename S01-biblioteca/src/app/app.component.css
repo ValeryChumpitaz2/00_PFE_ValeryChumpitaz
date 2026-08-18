@@ -29,3 +29,38 @@ input{
     border: 1px solid #ccc;
     border-radius: 6px;
 }
+
+/*Botones*/
+button{
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+/*Contenedor de tarjetas*/
+.libros{
+    display:grid;
+    gap: 15px;
+}
+
+/*Tarjeta de cada libro*/
+.tarjeta{
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+/*Titulo de cada libro*/
+.tarjeta h2{
+color:#2563eb
+}
+
+/*Pide de la aplicacion*/
+footer{
+    margin-top: 30px;
+    text-align: center;
+    color: #ff1212;
+}
