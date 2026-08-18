@@ -8,5 +8,24 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'S01-biblioteca';
+  title = 'Biblioteca Digital';
+
+  libros = [
+    {
+      titulo: 'Clean Code',
+      autor: 'Robert C. Martin',
+      estado: 'Disponible',
+    },
+    {
+      titulo: 'El principito',
+      autor: 'Antoine de Saint-Exupéry',
+      estado: 'Disponible',
+    },
+    {
+      titulo: 'Cien años de soledad',
+      autor: 'Gabriel García Márquez',
+      estado: 'Prestado',
+    },
+
+  ]
 }
