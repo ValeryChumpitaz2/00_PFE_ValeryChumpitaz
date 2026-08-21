@@ -25,6 +25,10 @@ export class AppComponent {
     {
       nombre: 'Aplicacion de Gestion de Tareas',
       descripcion: 'Desarrole una aplicacion de gestion de tareas utilizando Angular y Java'
+    },
+    {
+      nombre: 'Aplicacion de Gestion de Tareas',
+      descripcion: 'Desarrole una aplicacion de gestion de tareas utilizando Angular y Java'
     }
   ];
 
