@@ -20,3 +20,42 @@
     <button> Contactar </button>
   </div>
 </section>
+<!--SOBRE MI-->
+<p>
+  “Soy estudiante de Análisis de Sistemas interesada en el desarrollo de aplicaciones web y en la creación de soluciones tecnológicas.”
+</p>
+<!--HABILIDADES-->
+<section id="habilidades" class="seccion">
+  <h2> HABILIDADES </h2>
+  <div class="habilidades">
+    @for ( habilidad of habilidades; track habilidad){
+      <span>{{habilidad}}</span>
+    }
+  </div>
+</section>
+<!--PROYECTOS-->
+<section id="proyectos" class="seccion">
+  <h2> MIS PROYECTOS </h2>
+  <div class = "proyectos">
+    @for ( proyecto of proyectos; track proyecto.nombre){
+      <article class="proyecto">
+        <h3> {{proyecto.nombre}} </h3>
+        <p> {{proyecto.descripcion}} </p>
+        <button> Ver Proyecto </button>
+
+      </article>
+      
+    }
+  </div>
+</section>
+<!--CONTACTO-->
+<section class="contacto">
+  <h2>CONTACTO</h2>
+  <p> {{correo}}</p>
+  <p> {{ubicacion}} </p>
+</section>
+
+<!--FOOTER-->
+<footer>
+  <p>2026 {{nombre}} Mi perfil profesional </p>
+</footer>
