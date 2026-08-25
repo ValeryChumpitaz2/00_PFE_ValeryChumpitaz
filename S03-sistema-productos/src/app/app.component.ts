@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductoFormularioComponent } from './components/producto-formulario/producto-formulario.component';
 import { ProductoListaComponent } from './components/producto-lista/producto-lista.component';
@@ -11,77 +11,104 @@ export interface Producto {
   stock: number;
 }
 
-
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, ProductoFormularioComponent, ProductoListaComponent],
+
+  imports: [
+    NavbarComponent,
+    ProductoFormularioComponent,
+    ProductoListaComponent
+  ],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-
-
 export class AppComponent {
 
   productos: Producto[] = [
     {
       id: 1,
-      nombre: 'Producto 1',
-      precio: 10.99,
-      stock: 5
+      nombre: 'Laptop Lenovo',
+      precio: 2500,
+      stock: 10
     },
     {
       id: 2,
-      nombre: 'Producto 2',
-      precio: 19.99,
-      stock: 3
+      nombre: 'Mouse Logitech',
+      precio: 80,
+      stock: 25
     },
+    {
+      id: 3,
+      nombre: 'Teclado Mecánico',
+      precio: 150,
+      stock: 15
+    }
   ];
 
   productoEditar: Producto | null = null;
 
-  //CREATE
-  agregarProducto(producto: Producto) {
-    producto.id = this.obtenerNuevoId();
-    this.productos.push(producto);
-  }
 
-  //READ
-  obtenerProductos(): Producto[] {
-    return this.productos;
-  }
+  // CREATE / UPDATE
+  guardarProducto(producto: Producto) {
 
-  //UPDATE
-  actualizarProducto(producto: Producto) {
-    const indice = this.productos.findIndex(p => p.id === producto.id);
-    if (indice !== -1) {
-      this.productos[indice] = producto;
+    // Si tiene ID, estamos editando
+    if (producto.id !== 0) {
+
+      const indice = this.productos.findIndex(
+        p => p.id === producto.id
+      );
+
+      if (indice !== -1) {
+        this.productos[indice] = { ...producto };
+      }
+
+    } else {
+
+      // Si no tiene ID, estamos creando
+      const nuevoProducto: Producto = {
+        ...producto,
+        id: this.obtenerNuevoId()
+      };
+
+      this.productos.push(nuevoProducto);
+
     }
+
+    // Limpiamos el producto seleccionado
     this.productoEditar = null;
   }
 
-  //DELETE
-  eliminarProducto(id: number) {
-    this.productos = this.productos.filter(producto => producto.id !== id);
-  }
 
-  //SELECCIONAR UN PRODUCTO PARA EDITAR
-  seleccionarProducto(producto: Producto) {
+  // Seleccionar producto para editar
+  editarProducto(producto: Producto) {
+
     this.productoEditar = { ...producto };
+
   }
 
-  //GENERAR NUEVO ID
+
+  // DELETE
+  eliminarProducto(id: number) {
+
+    this.productos = this.productos.filter(
+      producto => producto.id !== id
+    );
+
+  }
+
+
+  // Generar ID
   obtenerNuevoId(): number {
+
     if (this.productos.length === 0) {
       return 1;
     }
-    return Math.max(...this.productos.map(producto => producto.id)) + 1;
+
+    return Math.max(
+      ...this.productos.map(p => p.id)
+    ) + 1;
+
   }
-  //RECIBE EL PRODUCTO DESDE EL FORMULARIO Y LO AGREGA A LA LISTA DE PRODUCTOS
-  guardarProducto(producto: Producto) {
-    if (producto.id === 0) {
-      this.agregarProducto(producto);
-    } else {
-      this.actualizarProducto(producto);
-    }
-  }
+
 }

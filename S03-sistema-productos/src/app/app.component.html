@@ -1,12 +1,30 @@
 <app-navbar></app-navbar>
+
 <main class="contenedor">
-<header>
-  <h1>SISTEMA DE GESTION DE PRODUCTOS</h1>
-  <p> Administra los productos de tu negocio.</p>
-</header>
-<app-producto-formulario [producto]="productoEditar" (guardar)="guardarProducto($event)">
 
-</app-producto-formulario>
+  <header>
+    <h1>Sistema de Gestión de Productos</h1>
 
-<app-producto-lista [productos]="productos"(editar)="editarProducto($event)" (eliminar)="eliminarProducto"($event)></app-producto-lista>
+    <p>
+      Administra los productos de tu negocio.
+    </p>
+  </header>
+
+
+  <!-- FORMULARIO -->
+
+  <app-producto-formulario
+    [producto]="productoEditar"
+    (guardar)="guardarProducto($event)">
+  </app-producto-formulario>
+
+
+  <!-- LISTA -->
+
+  <app-producto-lista
+    [productos]="productos"
+    (editar)="editarProducto($event)"
+    (eliminar)="eliminarProducto($event)">
+  </app-producto-lista>
+
 </main>

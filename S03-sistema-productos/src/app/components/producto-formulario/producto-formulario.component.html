@@ -1,8 +1,59 @@
 <section class="formulario">
-    <h2> REGISTRAR PRODUCTO </h2>
-    <div class="campos">
-        <input type="text" placeholder="Nombre del producto" [(ngModel)]="productoForm.nombre">
-        <input type="number" placeholder="Precio del producto" [(ngModel)]="productoForm.precio">
-        <input type="number" placeholder="Stock del producto" [(ngModel)]="productoForm.stock">
-        <button (click)="guardarProducto()">Guardar</button>
-    </div>
+
+  <h2>
+    {{ productoForm.id === 0
+      ? 'Registrar producto'
+      : 'Editar producto'
+    }}
+  </h2>
+
+
+  <div class="campos">
+
+    <input
+      type="text"
+      placeholder="Nombre del producto"
+      [(ngModel)]="productoForm.nombre"
+    >
+
+
+    <input
+      type="number"
+      placeholder="Precio"
+      [(ngModel)]="productoForm.precio"
+    >
+
+
+    <input
+      type="number"
+      placeholder="Stock"
+      [(ngModel)]="productoForm.stock"
+    >
+
+  </div>
+
+
+  <button
+    (click)="guardarProducto()">
+
+    {{ productoForm.id === 0
+      ? 'Guardar producto'
+      : 'Actualizar producto'
+    }}
+
+  </button>
+
+
+  @if (productoForm.id !== 0) {
+
+    <button
+      class="cancelar"
+      (click)="limpiar()">
+
+      Cancelar
+
+    </button>
+
+  }
+
+</section>

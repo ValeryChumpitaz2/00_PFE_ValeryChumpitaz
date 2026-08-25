@@ -1,9 +1,21 @@
 <section class="lista">
-    <h2> PRODUCTOS REGISTRADOS </h2>
-    <div class="productos">
-        @for(producto of productos; track producto.id){
-        <app-producto-card [producto]="producto" (editar)="editarProducto($event)"
-            (eliminar)="eliminarProducto($event)"></app-producto-card>
-        }
-    </div>
+
+  <h2>Productos registrados</h2>
+
+  <div class="productos">
+
+    @for (producto of productos; track producto.id) {
+
+      <app-producto-card
+        [producto]="producto"
+
+        (editar)="editarProducto($event)"
+
+        (eliminar)="eliminarProducto($event)">
+      </app-producto-card>
+
+    }
+
+  </div>
+
 </section>
