@@ -1,0 +1,11 @@
+.lista{
+    margin-top: 30px;
+}
+.lista h2{
+    color: #333;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
