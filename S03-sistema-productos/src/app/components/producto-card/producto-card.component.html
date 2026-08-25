@@ -1,1 +1,16 @@
-<p>producto-card works!</p>
+<article class="tarjeta">
+  <div class="incono">
+    🛒
+  </div>
+  <h3>{{ producto.nombre }}</h3>
+  <p> Precio: ${{ producto.precio }}  </p>
+  <p> Stock: {{ producto.stock }} </p>
+  <div class="acciones">
+    <button class="editar" (click)="editarProducto">
+        Editar
+    </button>
+    <button class="eliminar" (click)="eliminarProducto">
+        Eliminar
+    </button>
+  </div>
+</article>
