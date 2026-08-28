@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { Habito } from './models/habito';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HabitoFormularioComponent } from './components/habito-formulario/habito-formulario.component';
-import { HabitoListaComponent } from './components/habito-lista/habito-lista.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, HabitoFormularioComponent, HabitoListaComponent],
+  imports: [NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
