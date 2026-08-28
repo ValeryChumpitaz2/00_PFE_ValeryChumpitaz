@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Habito } from '../../models/habito';
+import { HabitoCardComponent } from '../habito-card/habito-card.component';
 
 @Component({
   selector: 'app-habito-lista',
-  imports: [],
+  imports: [HabitoCardComponent],
   templateUrl: './habito-lista.component.html',
   styleUrl: './habito-lista.component.css'
 })
 export class HabitoListaComponent {
+
+  @Input()
+  habitos: Habito[] = [];
 
 }
