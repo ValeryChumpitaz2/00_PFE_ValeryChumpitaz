@@ -1,0 +1,7 @@
+.lista{
+    display:flex;
+    grid-template-columns: repeat(
+        3,1
+    );
+    gap:20px;
+}
