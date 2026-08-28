@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Habito } from '../../models/habito';
 
 @Component({
   selector: 'app-habito-card',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './habito-card.component.css'
 })
 export class HabitoCardComponent {
-
+@Input()
+habito!: Habito;
 }

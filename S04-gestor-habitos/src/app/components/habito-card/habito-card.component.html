@@ -1,1 +1,14 @@
-<p>habito-card works!</p>
+<article class="tarjeta" [class.completado]="habito.completado">
+    <span class="icono">🌱</span>
+    <h3>{{ habito.nombre }}</h3>
+    <p> Categoria: {{ habito.categoria }}</p>
+    @if ( habito.completado){
+    <span class="estado">
+        Completado
+    </span>
+    } @else {
+    <span class="pediente">
+        Pediente
+    </span>
+    }
+</article>

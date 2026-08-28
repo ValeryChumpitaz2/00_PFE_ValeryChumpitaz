@@ -1,0 +1,15 @@
+.contenedor{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+header{
+    margin-bottom: 20px;
+}
+header h1{
+    color: #166534;
+}
+header p{
+    color: #555;
+}

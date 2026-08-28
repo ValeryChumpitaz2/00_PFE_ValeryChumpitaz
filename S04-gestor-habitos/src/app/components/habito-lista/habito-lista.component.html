@@ -1,10 +1,10 @@
-<section>
-    <h2> MIS HABITOS </h2>
-    <div class="lista">
-        @for (habito of habitos; track habito.id){
-            <app-habito-card 
-            [habito]="habito">
-            </app-habito-card>
-        }
-    </div>
-</section>
+        <section>
+            <h2> MIS HABITOS </h2>
+            <div class="lista">
+                @for (habito of habitos; track habito.id){
+                    <app-habito-card 
+                    [habito]="habito">
+                    </app-habito-card>
+                }
+            </div>
+        </section>

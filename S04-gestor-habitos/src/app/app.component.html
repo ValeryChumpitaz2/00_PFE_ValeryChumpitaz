@@ -1,8 +1,16 @@
 <app-navbar></app-navbar>
+
 <main class="contenedor">
   <header>
-     <h1> Gestor de Habitos </h1>
-     <p> Organiza tus habitos y lleva un registro de tu progreso.</p>
-    </header>
+    <h1>Gestor de Hábitos</h1>
+    <p>Organiza tus hábitos y lleva un registro de tu progreso.</p>
+  </header>
 
+  <app-habito-formulario
+    (guardar)="agregarHabito($event)">
+  </app-habito-formulario>
+
+  <app-habito-lista
+    [habitos]="habitos">
+  </app-habito-lista>
 </main>
