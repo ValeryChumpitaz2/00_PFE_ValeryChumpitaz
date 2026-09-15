@@ -1,1 +1,202 @@
-<p>tarea-lista works!</p>
+<!-- Contenedor principal de la sección de tareas -->
+<section class="contenedor">
+
+
+  <!-- Encabezado de la sección -->
+  <div class="titulo">
+
+
+    <!-- Agrupamos el título y la descripción -->
+    <div>
+      <h2>Mis tareas</h2>
+      <p>Lista de actividades pendientes y completadas</p>
+    </div>
+
+
+    <!-- Botón que utilizaremos posteriormente para agregar tareas -->
+    <button class="btn-agregar">
+      + Nueva tarea
+    </button>
+
+
+  </div>
+
+
+
+
+  <!-- Sección donde mostramos un resumen de las tareas -->
+  <div class="resumen">
+
+
+    <!-- Tarjeta que muestra el total de tareas -->
+    <div class="card-resumen">
+
+
+      <!-- Icono de la tarjeta -->
+      <span class="icono">📋</span>
+
+
+      <div>
+
+
+        <!-- Mostramos dinámicamente la cantidad de tareas -->
+        <strong>{{ tareas.length }}</strong>
+
+
+        <p>Total</p>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- Tarjeta de tareas completadas -->
+    <div class="card-resumen">
+
+
+      <span class="icono">✓</span>
+
+
+      <div>
+
+
+        <!-- Por ahora mostramos un valor fijo -->
+        <strong>1</strong>
+
+
+        <p>Completadas</p>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- Tarjeta de tareas pendientes -->
+    <div class="card-resumen">
+
+
+      <span class="icono">⏳</span>
+
+
+      <div>
+
+
+        <!-- Por ahora mostramos un valor fijo -->
+        <strong>2</strong>
+
+
+        <p>Pendientes</p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+  <!-- Contenedor donde mostraremos todas las tareas -->
+  <div class="lista">
+
+
+    <!-- Recorremos cada elemento de la lista de tareas -->
+    @for (tarea of tareas; track tarea.id) {
+
+
+      <!-- Cada tarea se mostrará como un artículo independiente -->
+      <article class="tarea">
+
+
+        <!-- Información principal de la tarea -->
+        <div class="tarea-info">
+
+
+          <!-- Mostramos un indicador según el estado de la tarea -->
+          <div class="check">
+
+
+            <!-- Si la tarea está completada mostramos un check -->
+            @if (tarea.completada) {
+              ✓
+
+
+            <!-- Si no está completada mostramos un círculo -->
+            } @else {
+              ○
+            }
+
+
+          </div>
+
+
+
+
+          <!-- Información de la tarea -->
+          <div>
+
+
+            <!-- Mostramos el nombre de la tarea dinámicamente -->
+            <h3>{{ tarea.nombre }}</h3>
+
+
+
+
+            <!-- Verificamos el estado de la tarea -->
+            @if (tarea.completada) {
+
+
+              <!-- Estado para una tarea completada -->
+              <span class="estado completada">
+                Completada
+              </span>
+
+
+            } @else {
+
+
+              <!-- Estado para una tarea pendiente -->
+              <span class="estado pendiente">
+                Pendiente
+              </span>
+
+
+            }
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+        <!-- Botón que posteriormente podrá mostrar el detalle -->
+        <button class="btn-ver">
+          Ver
+        </button>
+
+
+      </article>
+
+
+    }
+
+
+  </div>
+
+
+</section>
+
