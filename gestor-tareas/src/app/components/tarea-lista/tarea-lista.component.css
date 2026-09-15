@@ -1,0 +1,385 @@
+/* Contenedor principal de la sección */
+.contenedor {
+  /* Color de fondo de la tarjeta */
+  background: white;
+
+
+  /* Espacio interno */
+  padding: 30px;
+
+
+  /* Redondeamos las esquinas */
+  border-radius: 18px;
+
+
+  /* Agregamos una sombra para darle profundidad */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+
+
+/* Encabezado de la sección */
+.titulo {
+  /* Colocamos los elementos en una fila */
+  display: flex;
+
+
+  /* Separamos el título del botón */
+  justify-content: space-between;
+
+
+  /* Alineamos los elementos verticalmente */
+  align-items: center;
+
+
+  /* Espacio debajo del encabezado */
+  margin-bottom: 30px;
+}
+
+
+
+
+/* Título "Mis tareas" */
+.titulo h2 {
+  /* Eliminamos el margen predeterminado */
+  margin: 0;
+
+
+  /* Color del título */
+  color: #1e293b;
+
+
+  /* Tamaño de letra */
+  font-size: 28px;
+}
+
+
+
+
+/* Texto descriptivo */
+.titulo p {
+  /* Color secundario */
+  color: #64748b;
+
+
+  /* Dejamos espacio entre el título y el párrafo */
+  margin-top: 8px;
+}
+
+
+
+
+/* Botón para agregar una tarea */
+.btn-agregar {
+  /* Color de fondo */
+  background: #2563eb;
+
+
+  /* Color del texto */
+  color: white;
+
+
+  /* Eliminamos el borde predeterminado */
+  border: none;
+
+
+  /* Espacio interno del botón */
+  padding: 12px 20px;
+
+
+  /* Redondeamos las esquinas */
+  border-radius: 8px;
+
+
+  /* Cambiamos el cursor al pasar por encima */
+  cursor: pointer;
+
+
+  /* Texto en negrita */
+  font-weight: bold;
+}
+
+
+
+
+/* Cambiamos el color del botón cuando pasamos el mouse */
+.btn-agregar:hover {
+  background: #1d4ed8;
+}
+
+
+
+
+/* Contenedor de las tarjetas de resumen */
+.resumen {
+  /* Utilizamos CSS Grid para organizar las tarjetas */
+  display: grid;
+
+
+  /* Creamos 3 columnas del mismo tamaño */
+  grid-template-columns: repeat(3, 1fr);
+
+
+  /* Espacio entre las tarjetas */
+  gap: 15px;
+
+
+  /* Espacio debajo del resumen */
+  margin-bottom: 30px;
+}
+
+
+
+
+/* Cada tarjeta del resumen */
+.card-resumen {
+  /* Colocamos el icono y la información en una fila */
+  display: flex;
+
+
+  /* Centramos los elementos verticalmente */
+  align-items: center;
+
+
+  /* Espacio entre el icono y el texto */
+  gap: 15px;
+
+
+  /* Espacio interno */
+  padding: 18px;
+
+
+  /* Fondo de la tarjeta */
+  background: #f8fafc;
+
+
+  /* Esquinas redondeadas */
+  border-radius: 12px;
+
+
+  /* Borde de la tarjeta */
+  border: 1px solid #e2e8f0;
+}
+
+
+
+
+/* Tamaño de los iconos */
+.icono {
+  font-size: 25px;
+}
+
+
+
+
+/* Número principal de cada resumen */
+.card-resumen strong {
+  font-size: 24px;
+  color: #1e293b;
+}
+
+
+
+
+/* Texto debajo del número */
+.card-resumen p {
+  margin: 3px 0 0;
+  color: #64748b;
+}
+
+
+
+
+/* Contenedor de todas las tareas */
+.lista {
+  /* Utilizamos Flexbox */
+  display: flex;
+
+
+  /* Colocamos las tareas una debajo de otra */
+  flex-direction: column;
+
+
+  /* Espacio entre cada tarea */
+  gap: 12px;
+}
+
+
+
+
+/* Tarjeta individual de una tarea */
+.tarea {
+  /* Colocamos el contenido en una fila */
+  display: flex;
+
+
+  /* Mandamos la información a la izquierda y el botón a la derecha */
+  justify-content: space-between;
+
+
+  /* Centramos verticalmente */
+  align-items: center;
+
+
+  /* Espacio interno */
+  padding: 18px;
+
+
+  /* Borde */
+  border: 1px solid #e2e8f0;
+
+
+  /* Esquinas redondeadas */
+  border-radius: 12px;
+
+
+  /* Suaviza los cambios visuales */
+  transition: 0.2s;
+}
+
+
+
+
+/* Efecto cuando pasamos el mouse sobre una tarea */
+.tarea:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+/* Agrupamos el icono y la información de la tarea */
+.tarea-info {
+  display: flex;
+  align-items: center;
+
+
+  /* Espacio entre el indicador y la información */
+  gap: 15px;
+}
+
+
+
+
+/* Indicador circular del estado */
+.check {
+  /* Ancho del círculo */
+  width: 40px;
+
+
+  /* Alto del círculo */
+  height: 40px;
+
+
+  /* Convertimos el cuadrado en un círculo */
+  border-radius: 50%;
+
+
+  /* Color de fondo */
+  background: #eff6ff;
+
+
+  /* Color del símbolo */
+  color: #2563eb;
+
+
+  /* Centramos el símbolo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  /* Tamaño del símbolo */
+  font-size: 20px;
+}
+
+
+
+
+/* Nombre de la tarea */
+.tarea h3 {
+  /* Eliminamos el margen superior */
+  margin: 0 0 7px;
+
+
+  /* Color del texto */
+  color: #1e293b;
+}
+
+
+
+
+/* Estilo general de las etiquetas de estado */
+.estado {
+  /* Tamaño del texto */
+  font-size: 13px;
+
+
+  /* Espacio interno */
+  padding: 5px 10px;
+
+
+  /* Forma de etiqueta redondeada */
+  border-radius: 15px;
+}
+
+
+
+
+/* Estado completada */
+.completada {
+  /* Fondo verde claro */
+  background: #dcfce7;
+
+
+  /* Texto verde oscuro */
+  color: #166534;
+}
+
+
+
+
+/* Estado pendiente */
+.pendiente {
+  /* Fondo amarillo claro */
+  background: #fef3c7;
+
+
+  /* Texto amarillo oscuro */
+  color: #92400e;
+}
+
+
+
+
+/* Botón "Ver" */
+.btn-ver {
+  /* Fondo blanco */
+  background: white;
+
+
+  /* Borde */
+  border: 1px solid #cbd5e1;
+
+
+  /* Espacio interno */
+  padding: 8px 15px;
+
+
+  /* Esquinas redondeadas */
+  border-radius: 7px;
+
+
+  /* Cursor de botón */
+  cursor: pointer;
+}
+
+
+
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn-ver:hover {
+  background: #f1f5f9;
+}
+

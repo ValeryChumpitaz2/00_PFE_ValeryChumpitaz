@@ -1,0 +1,111 @@
+/* Contenedor principal de toda la aplicación */
+.app {
+  /* La aplicación ocupará como mínimo toda la altura de la pantalla */
+  min-height: 100vh;
+
+
+  /* Color de fondo general */
+  background: #f4f7fb;
+
+
+  /* Tipo de letra que utilizaremos */
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Estilos para el encabezado */
+.header {
+  /* Fondo blanco para diferenciarlo del resto de la aplicación */
+  background: white;
+
+
+  /* Espacio interno: 25px arriba/abajo y 50px izquierda/derecha */
+  padding: 25px 50px;
+
+
+  /* Colocamos los elementos en una fila */
+  display: flex;
+
+
+  /* Separamos el título del usuario hacia los extremos */
+  justify-content: space-between;
+
+
+  /* Alineamos los elementos verticalmente */
+  align-items: center;
+
+
+  /* Agregamos una pequeña sombra debajo del encabezado */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+/* Estilos para el título dentro del encabezado */
+.header h1 {
+  /* Eliminamos el margen que trae por defecto el h1 */
+  margin: 0;
+
+
+  /* Color azul para el título */
+  color: #1e3a8a;
+}
+
+
+
+
+/* Estilos para la descripción */
+.header p {
+  /* Dejamos un pequeño espacio entre el título y el texto */
+  margin: 5px 0 0;
+
+
+  /* Color gris para el texto secundario */
+  color: #64748b;
+}
+
+
+
+
+/* Estilos para el nombre del usuario */
+.usuario {
+  /* Fondo azul muy claro */
+  background: #eff6ff;
+
+
+  /* Color del texto */
+  color: #2563eb;
+
+
+  /* Espacio interno del elemento */
+  padding: 10px 18px;
+
+
+  /* Redondeamos las esquinas */
+  border-radius: 20px;
+
+
+  /* Colocamos el texto en negrita */
+  font-weight: bold;
+}
+
+
+
+
+/* Estilos para el contenido principal */
+main {
+  /* El contenido tendrá como máximo 1000px de ancho */
+  max-width: 1000px;
+
+
+  /* Centramos el contenido horizontalmente */
+  margin: 40px auto;
+
+
+  /* Agregamos espacio a los lados */
+  padding: 0 20px;
+}
+
