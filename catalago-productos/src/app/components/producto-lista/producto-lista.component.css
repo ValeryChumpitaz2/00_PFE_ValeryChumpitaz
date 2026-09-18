@@ -1,71 +1,319 @@
-.contenedor{
-    max-width: 950px;
-    margin: 40px auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #1e293b;
+/* ========================================================= */
+/* CONTENEDOR PRINCIPAL */
+/* ========================================================= */
 
-}
-.encabezado span{
-    color: #2563eb;
-    font-size: 13px;
-    font-weight: bold;
-}
-h1{
-    margin: 8px 0;
-}
-.encabezado p{
-    color: #64748b;
-}
-.formulario{
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin: 25px 0;
-}
-.campos{
-    display: flex;
-    gap: 10px;
-}
 
-input{
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 5px;
+/*
+  .contenedor selecciona el elemento que tiene la clase "contenedor" en nuestro HTML.
+  Aquí definimos el ancho máximo, los márgenes, el espacio interno y la fuente.
+*/
+.contenedor {
+
+
+  /* El contenido no ocupará más de 950px de ancho. */
+  max-width: 950px;
+
+
+  /* Centra horizontalmente el contenedor.
+     40px = espacio arriba y abajo.
+     auto = centra izquierda y derecha. */
+  margin: 40px auto;
+
+
+  /* Espacio interno entre el contenido y los bordes del contenedor. */
+  padding: 25px;
+
+
+  /* Fuente utilizada dentro del contenedor. */
+  font-family: Arial, sans-serif;
+
+
+  /* Color principal del texto. */
+  color: #1e293b;
 }
 
-button{
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.lista{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+
+
+
+/* ========================================================= */
+/* ENCABEZADO */
+/* ========================================================= */
+
+
+/*  Seleccionamos el <span> que se encuentra dentro de .encabezado. */
+.encabezado span {
+
+
+  /* Color azul del texto. */
+  color: #2563eb;
+
+
+  /* Tamaño de la letra. */
+  font-size: 13px;
+
+
+  /* Hace que el texto aparezca en negrita. */
+  font-weight: bold;
 }
 
-.proucto{
-    background: #f1f5f9;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-}
-.proucto img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
+
+/* Estilos para el título principal <h1>. */
+h1 {
+
+
+  /* 8px arriba y abajo.
+     0px izquierda y derecha. */
+  margin: 8px 0;
 }
 
-.producto h3{
-    margin: 10px 0;
+
+/*   Seleccionamos el párrafo que está dentro del encabezado. */
+.encabezado p {
+
+
+  /* Color gris para diferenciarlo del título principal. */
+  color: #64748b;
 }
-.producto p{
-    color: #64748b;
-    font-size: 14px;
+
+
+
+
+/* ========================================================= */
+/* FORMULARIO */
+/* ========================================================= */
+
+
+/* .formulario representa la sección donde registramos un nuevo producto. */
+.formulario {
+
+
+  /* Color de fondo azul muy claro. */
+  background: #f0f7ff;
+
+
+  /* Espacio interno de 20px. */
+  padding: 20px;
+
+
+  /* Redondea las esquinas. */
+  border-radius: 12px;
+
+
+  /* Agrega espacio arriba y abajo respecto a otros elementos. */
+  margin: 25px 0;
 }
+
+
+
+
+/*
+  .campos contiene los inputs  y el botón del formulario.
+*/
+.campos {
+
+
+  /* Coloca los elementos en una fila. */
+  display: flex;
+
+
+  /* Agrega 10px de separación entre ellos. */
+  gap: 10px;
+}
+
+
+
+
+/* ========================================================= */
+/* INPUTS */
+/* ========================================================= */
+
+
+/* Estilos para todos los elementos <input>. */
+input {
+
+
+  /* flex: 1 hace que los inputs ocupen el espacio disponible dentro del contenedor. */
+  flex: 1;
+
+
+  /* Espacio interno del input. */
+  padding: 11px;
+
+
+  /* Borde gris claro de 1px. */
+  border: 1px solid #cbd5e1;
+
+
+  /* Redondea las esquinas. */
+  border-radius: 7px;
+}
+
+
+
+
+/* ========================================================= */
+/* BOTÓN */
+/* ========================================================= */
+
+
+/* Estilos para el botón "Registrar". */
+button {
+
+
+  /* Fondo azul. */
+  background: #2563eb;
+
+
+  /* Texto blanco. */
+  color: white;
+
+
+  /* Eliminamos el borde predeterminado. */
+  border: none;
+
+
+  /* Espacio interno:
+     11px arriba/abajo
+     18px izquierda/derecha */
+  padding: 11px 18px;
+
+
+  /* Esquinas redondeadas. */
+  border-radius: 7px;
+
+
+  /*  Cuando pasamos el mouse sobre el botón, el cursor cambia a una mano. */
+  cursor: pointer;
+}
+
+
+
+
+/* ========================================================= */
+/* LISTA DE PRODUCTOS */
+/* ========================================================= */
+
+
+/* .lista es el contenedor donde aparecerán todas las tarjetas. */
+.lista {
+
+
+  /*    CSS Grid permite organizar los productos en filas y columnas. */
+  display: grid;
+
+
+  /* repeat(3, 1fr) crea 3 columnas del mismo tamaño.
+    Por ejemplo:
+    Producto 1 | Producto 2 | Producto 3
+    Producto 4 | Producto 5 | Producto 6
+  */
+  grid-template-columns: repeat(3, 1fr);
+
+
+  /* Espacio de 15px entre las tarjetas. */
+  gap: 15px;
+}
+
+
+
+
+/* ========================================================= */
+/* TARJETA DEL PRODUCTO */
+/* ========================================================= */
+
+
+/*  .producto representa cada tarjeta individual. */
+.producto {
+
+
+  /* Espacio interno de la tarjeta. */
+  padding: 15px;
+
+
+  /* Borde gris claro. */
+  border: 1px solid #e2e8f0;
+
+
+  /* Esquinas redondeadas. */
+  border-radius: 10px;
+
+
+  /* Fondo blanco. */
+  background: white;
+}
+
+
+
+
+/* ========================================================= */
+/* IMAGEN DEL PRODUCTO */
+/* ========================================================= */
+
+
+/* Seleccionamos las imágenes que están dentro de cada tarjeta de producto. */
+.producto img {
+
+
+  /* La imagen ocupará todo el ancho disponible de la tarjeta. */
+  width: 100%;
+
+
+  /* Altura fija de 140px. */
+  height: 140px;
+
+
+  /* contain hace que la imagen completa sea visible sin deformarla. */
+  object-fit: contain;
+
+
+  /* Fondo gris muy claro detrás de la imagen. */
+  background: #f8fafc;
+
+
+  /* Esquinas redondeadas. */
+  border-radius: 8px;
+}
+
+
+
+
+/* ========================================================= */
+/* NOMBRE DEL PRODUCTO */
+/* ========================================================= */
+
+
+/*  Estilos para el nombre del producto. */
+.producto h3 {
+
+
+  /*
+    10px de espacio arriba y abajo.
+    5px de espacio a izquierda y derecha.
+  */
+  margin: 10px 0 5px;
+}
+
+
+
+
+/* ========================================================= */
+/* PRECIO */
+/* ========================================================= */
+
+
+/*  Estilos para el precio del producto. */
+.producto p {
+
+
+  /* Eliminamos el margen predeterminado. */
+  margin: 0;
+
+
+  /* Mostramos el precio en azul. */
+  color: #2563eb;
+
+
+  /* Hacemos que el precio aparezca en negrita. */
+  font-weight: bold;
+}
+
