@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
-
+import { FormsModule } from '@angular/forms'; 
 
 
 @Component({
   selector: 'app-producto-lista',
-  standalone: true,
-  imports: [],
+
+  imports: [FormsModule],
   templateUrl: './producto-lista.component.html',
   styleUrl: './producto-lista.component.css'
 })
