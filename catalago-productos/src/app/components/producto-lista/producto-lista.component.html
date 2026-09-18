@@ -1,1 +1,30 @@
-<p>producto-lista works!</p>
+<div class="contenedor">
+    <header class="encabezado">
+        <span> API REST . GET + POST </span>
+        <h1>Catalogo de Productos</h1>
+        <p> Consulta y registro de productos mediante una API REST </p>
+    </header>
+    <section class="formulario">
+        <h2>Registrar de Productos</h2>
+        <div class="campos">
+            <input type="text" placeholder="Nombre"[(ngModel)]="nombre">
+            <input type="number" placeholder="Precio" [(ngModel)]="precio">
+            <input type="text" placeholder="URL de la imagen" [(ngModel)]="imagen">
+            <button (click)="registrarProducto()"> Registrar </button>
+        </div>
+    </section>
+    <div class="titulo">
+        <h2>Lista de Productos</h2>
+        <span>{{productos.length}}</span>
+    </div>
+    <div class="lista">
+        @for (producto of productos; track producto.id){
+            <article class="producto">
+                <img [src]="producto.thumbnail" [alt]="producto.title">
+                <h3>{{producto.title}}</h3>
+                <p> ${{producto.price}}</p>
+            </article>
+        }
+
+    </div>
+</div>
